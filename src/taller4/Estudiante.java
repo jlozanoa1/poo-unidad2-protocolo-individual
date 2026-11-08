@@ -3,6 +3,7 @@ public class Estudiante {
     int edad;
     double notaPromedio;
 
+    // ------------- CONSTRUCTORES -------------
     public Estudiante(String nombre, int edad, double notaPromedio) {
         if ((nombre != null && nombre.trim().isEmpty()) ||
                 (nombre != null && nombre.trim().isBlank())) {
@@ -21,4 +22,25 @@ public class Estudiante {
     public Estudiante() {
         this("Desconocido", 1, 0);
     }
+    // ------------- FIN - CONSTRUCTORES -------------
+
+    // ------------- GETTERS -------------
+    @Override
+    public String toString() {
+        return String.format("Nombre: %s | Edad: %d | Nota promedio: %.2f",
+                this.nombre, this.edad, this.notaPromedio);
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public double getNotaPromedio() {
+        return this.notaPromedio;
+    }
+    // ------------- FIN - GETTERS -------------
 }
