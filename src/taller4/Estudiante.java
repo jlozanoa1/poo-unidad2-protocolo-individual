@@ -1,7 +1,7 @@
 public class Estudiante {
-    String nombre;
-    int edad;
-    double notaPromedio;
+    private String nombre;
+    private int edad;
+    private double notaPromedio;
 
     // ------------- CONSTRUCTORES -------------
     public Estudiante(String nombre, int edad, double notaPromedio) {
@@ -43,4 +43,18 @@ public class Estudiante {
         return this.notaPromedio;
     }
     // ------------- FIN - GETTERS -------------
+
+    // ------------- SETTERS -------------
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNotaPromedio(double notaPromedio) {
+        this.notaPromedio = notaPromedio;
+    }
+    // ------------- FIN - SETTERS -------------
 }
