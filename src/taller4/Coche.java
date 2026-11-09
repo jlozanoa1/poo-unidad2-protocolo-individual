@@ -43,7 +43,7 @@ public class Coche {
         return this.modelo;
     }
 
-    public double getvelocidadMaxima() {
+    public double getVelocidadMaxima() {
         return this.velocidadMaxima;
     }
     // ------------- FIN - GETTERS -------------
@@ -57,8 +57,11 @@ public class Coche {
         this.modelo = modelo;
     }
 
-    public void setvelocidadMaxima(double velocidadMaxima) {
-        this.velocidadMaxima = velocidadMaxima;
+    public void acelerar(double velocidad) {
+        if (velocidad <= 1) {
+            throw new IllegalArgumentException("La velocidad para acelerar debe ser positiva.");
+        }
+        this.velocidadMaxima += velocidad;
     }
     // ------------- FIN - SETTERS -------------
 }
