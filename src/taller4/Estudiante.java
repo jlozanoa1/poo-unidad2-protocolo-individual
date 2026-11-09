@@ -17,6 +17,9 @@ public class Estudiante {
         if (notaPromedio < 0) {
             throw new IllegalArgumentException("La nota promedio del estudiante no puede ser menor a 0.");
         }
+        this.nombre = nombre;
+        this.edad = edad;
+        this.notaPromedio = notaPromedio;
     }
 
     public Estudiante() {
