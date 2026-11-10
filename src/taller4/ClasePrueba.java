@@ -11,5 +11,4 @@ public class ClasePrueba {
         this.propiedad2 = propiedad2;
         this.propiedad3 = propiedad3;
     }
-
 }
