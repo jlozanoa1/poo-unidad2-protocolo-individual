@@ -35,7 +35,7 @@ public class Coche {
                 this.marca, this.modelo, this.velocidadMaxima);
     }
 
-    public String getmarca() {
+    public String getMarca() {
         return this.marca;
     }
 
@@ -50,15 +50,23 @@ public class Coche {
 
     // ------------- SETTERS -------------
     public void setMarca(String marca) {
+        if ((marca != null && marca.trim().isEmpty()) ||
+                (marca != null && marca.trim().isBlank())) {
+            throw new IllegalArgumentException("La marca del coche no puede estar vacía.");
+        }
         this.marca = marca;
     }
 
     public void setModelo(String modelo) {
+        if ((modelo != null && modelo.trim().isEmpty()) ||
+                (modelo != null && modelo.trim().isBlank())) {
+            throw new IllegalArgumentException("El modelo del coche no puede estar vacío.");
+        }
         this.modelo = modelo;
     }
 
     public void acelerar(double velocidad) {
-        if (velocidad <= 1) {
+        if (velocidad < 1) {
             throw new IllegalArgumentException("La velocidad para acelerar debe ser positiva.");
         }
         this.velocidadMaxima += velocidad;
